@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "javascript-algorithm",
-            "program": "${workspaceFolder}/src/sort/directInsertSort.js"
+            "program": "${workspaceFolder}/src/sort/directInsertSort.js",
         }
     ]
 }

@@ -1,21 +1,20 @@
 const ArrayUtil = require('../utils/arrayUtil');
 
-const directInsertSort = (sourceArray) => {
-    if (!Array.isArray(sourceArray)) throw new TypeError(`${sourceArray} 不是数组!`); 
-    
-    if (sourceArray.length <= 1) return sourceArray;
+const directInsertSort = (array) => {
+    if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`); 
+    if (array.length <= 1) return array;
 
-    const sortedArray = [sourceArray[0]];
-    for (let i = 1; i < sourceArray.length; i++) {
+    const sortedArray = [array[0]];
+    for (let i = 1; i < array.length; i++) {
         let j = 0;
         for (; j < sortedArray.length; j++) {
-            if (sourceArray[i] < sortedArray[j]) {
-                ArrayUtil.insert(sortedArray, j, sourceArray[i]);
+            if (array[i] < sortedArray[j]) {
+                ArrayUtil.insert(sortedArray, j, array[i]);
                 break;
             }
         }
        
-        if (j === sortedArray.length) sortedArray.push(sourceArray[i]);
+        if (j === sortedArray.length) sortedArray.push(array[i]);
     }
 
     return sortedArray;
