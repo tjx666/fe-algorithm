@@ -5,7 +5,7 @@
   "description": "Using javascript to implement all kinds of algorithm.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require intelli-espower-loader"
   },
   "keywords": [
     "javascript",
@@ -13,5 +13,13 @@
     "sort"
   ],
   "author": "YuTengjing",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^6.1.2",
+    "power-assert": "^1.6.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
