@@ -3,7 +3,22 @@ const binaryInsertSearch = (array, value, startIndex = 0, endIndex = array.lengt
     if (array.length === 0) return 0;
     if (array.length === 1) return value < array[0] ? 0 : 1;
 
-    if (startIndex >= endIndex) return value < array[startIndex] ? startIndex : startIndex + 1;
+    if (startIndex === endIndex) {
+        if (value < array[startIndex]) {
+            return startIndex;
+        } else {
+            let j = startIndex + 1
+            for (; j < array.length; j++) {
+                if (value < array[j]) return j;
+            }
+
+            if (j === array.length) {
+                return array.length;
+            }
+        }
+    } else if (startIndex > endIndex) {
+        return startIndex;
+    }
 
     const middleIndex = (startIndex + endIndex) / 2 | 0;
 
@@ -14,12 +29,13 @@ const binaryInsertSearch = (array, value, startIndex = 0, endIndex = array.lengt
         endIndex = middleIndex - 1;
         return binaryInsertSearch(array, value, startIndex, endIndex);
     } else if (value === array[middleIndex]) {
-        for (let j = middleIndex + 1; j < array.length; j++) {
+        let j = middleIndex + 1;
+        for (; j < array.length; j++) {
             if (value < array[j]) return j;
         }
 
         if (j === array.length) {
-            return array.length;            
+            return array.length;
         }
     }
 }
