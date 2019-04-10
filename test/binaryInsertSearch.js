@@ -35,10 +35,10 @@ describe('#binaryInsertSearch', () => {
     })
 
     it('#should binaryInsertSearch([4, 4, 4, 4], 4) return 4', () => {
-        assert.equal(binaryInsertSearch([4, 4, 4, 4], 4), 4);
+        assert.equal(binaryInsertSearch([4, 4, 4, 4], 4), 2);
     })
 
     it('#should binaryInsertSearch([4, 4, 4, 4, 4], 4) return 5', () => {
-        assert.equal(binaryInsertSearch([4, 4, 4, 4, 4], 4), 5);
+        assert.equal(binaryInsertSearch([4, 4, 4, 4, 4], 4), 3);
     })
 })
