@@ -6,7 +6,9 @@ class ArrayUtil {
      * @param {number} value 
      */
     static insert(array, position, value) {
-        if (position > array.length && position < -1) {
+        if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`);
+        
+        if (position > array.length || position < -1) {
             throw new RangeError(`下标不合法! 下标应该在 [-1, ${array.length}], 而传入的下标为: ${position}`);
         }
         
