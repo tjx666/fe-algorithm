@@ -12,11 +12,9 @@ const binaryInsertSearch = (array, value, startIndex = 0, endIndex = array.lengt
     if (value < array[middleIndex]) {
         endIndex = middleIndex - 1;
         return binaryInsertSearch(array, value, startIndex, endIndex);
-    } else if (value > array[middleIndex]) {
+    } else {
         startIndex = middleIndex + 1;
         return binaryInsertSearch(array, value, startIndex, endIndex);
-    } else {
-        return middleIndex + 1;
     }
 }
 
