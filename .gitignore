@@ -84,4 +84,5 @@ typings/
 .dynamodb/
 
 # custom
+./
 testApi.js
