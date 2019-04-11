@@ -2,7 +2,7 @@
  * 冒泡排序
  * @param {*} array 
  */
-const bubbleSor = (array) => {
+const bubbleSort = (array) => {
     if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`); 
 
     const resultArray = [...array];
@@ -21,9 +21,4 @@ const bubbleSor = (array) => {
     return resultArray;
 }
 
-
-if (require.main === module) {
-    console.log(bubbleSor([-706, -93, -228]))
-} else {
-    module.exports = bubbleSor;
-}
+module.exports = bubbleSort;

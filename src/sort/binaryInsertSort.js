@@ -1,5 +1,6 @@
-const binaryInsertSearch = require('../binaryInsertSearch');
+const binaryInsertSearch = require('./binaryInsertSearch');
 const ArrayUtil = require('../utils/arrayUtil');
+
 /**
  * 二分插入排序
  * @param {*} array 

@@ -1,6 +1,5 @@
 const ArrayUtil = require('../utils/arrayUtil');
 
-
 /**
  * 直接插入排序
  * @param {*} array 
@@ -24,8 +23,4 @@ const directInsertSort = (array) => {
     return sortedArray;
 }
 
-if (require.main === module) {
-    console.log(directInsertSort([-706,-93,-228]))
-} else {
-    module.exports = directInsertSort;
-}
+module.exports = directInsertSort;
