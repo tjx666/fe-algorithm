@@ -1,11 +1,15 @@
 const ArrayUtil = require('../utils/arrayUtil');
 
+
+/**
+ * 直接插入排序
+ * @param {*} array 
+ */
 const directInsertSort = (array) => {
     if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`); 
-    if (array.length <= 1) return [...array];
 
-    const sortedArray = [array[0]];
-    for (let i = 1; i < array.length; i++) {
+    const sortedArray = [];
+    for (let i = 0; i < array.length; i++) {
         let j = 0;
         for (; j < sortedArray.length; j++) {
             if (array[i] < sortedArray[j]) {
