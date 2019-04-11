@@ -1,5 +1,9 @@
 const assert = require('assert');
 
+/**
+ * 快速排序
+ * @param {*} array 
+ */
 const quickSort = (array) => {
     const resultArray = [...array];
 
@@ -26,10 +30,6 @@ const quickSort = (array) => {
 
 
     return resultArray;
-}
-
-if (require.main === module) {
-    console.log(quickSort([-9872, 2326, -5487, -6512, -6751, -4604, 8900, -4756, -2086, 4217]));
 }
 
 module.exports = quickSort;
