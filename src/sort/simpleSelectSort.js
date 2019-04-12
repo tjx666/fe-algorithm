@@ -1,6 +1,4 @@
 const simpleSelectSort = (array) => {
-    if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`); 
-
     const resultArray = [...array];
     for (let i = 0, iMax = array.length - 1; i < iMax; i++) {
         let minIndex = i;

@@ -1,5 +1,4 @@
 const binaryInsertSearch = (array, value, startIndex = 0, endIndex = array.length - 1) => {
-    if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`);
     if (startIndex > endIndex) return value >= array[startIndex] ? startIndex + 1 : startIndex;
 
     const middleIndex = (startIndex + endIndex) / 2 | 0;

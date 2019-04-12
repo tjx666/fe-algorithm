@@ -5,8 +5,6 @@ const ArrayUtil = require('../utils/arrayUtil');
  * @param {*} array 
  */
 const directInsertSort = (array) => {
-    if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`); 
-
     const sortedArray = [];
     for (let i = 0; i < array.length; i++) {
         let j = 0;
