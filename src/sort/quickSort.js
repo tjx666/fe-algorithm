@@ -28,7 +28,6 @@ const quickSort = (array) => {
         sort(resultArray, i + 1, right);
     }(array);
 
-
     return resultArray;
 }
 

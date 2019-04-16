@@ -1,7 +1,5 @@
 const assert = require('assert');
 const binaryInsertSearch = require('../../src/sort/binaryInsertSearch');
-const _ = require('lodash');
-
 
 describe('#binaryInsertSearch', () => {
     const testArray = [1, 2, 5];
