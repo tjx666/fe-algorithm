@@ -12,9 +12,4 @@ const binaryInsertSearch = (array, value, startIndex = 0, endIndex = array.lengt
 }
 
 
-if (require.main === module) {
-    const testArray = [1, 2, 4, 5];
-    console.log(binaryInsertSearch(testArray, 8));
-} else {
-    module.exports = binaryInsertSearch;
-}
+module.exports = binaryInsertSearch;
