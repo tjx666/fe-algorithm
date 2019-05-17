@@ -25,6 +25,8 @@
             "error",
             "single"
         ],
-        "semi": "off"
+        "semi": "off",
+        "no-unused-vars": "off",
+        "no-console": "off"
     }
 }
