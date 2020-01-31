@@ -1,27 +1,48 @@
 {
-  "name": "javascript-algorithm",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Using javascript to implement all kinds of algorithm.",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha --require intelli-espower-loader"
-  },
-  "keywords": [
-    "javascript",
-    "algorithm",
-    "sort"
-  ],
-  "author": "YuTengjing",
-  "license": "ISC",
-  "devDependencies": {
-    "intelli-espower-loader": "^1.0.1",
-    "mocha": "^6.1.2",
-    "power-assert": "^1.6.1"
-  },
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "eslint": "^5.16.0",
-    "lodash": "^4.17.11"
-  }
+    "name": "fe-algorithm",
+    "version": "1.0.0",
+    "description": "LeetCode with JavaScript",
+    "main": "index.js",
+    "repository": "https://github.com/tjx666/fe-algorithm",
+    "author": "YuTengjing",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "test": "mocha",
+        "coverage": "nyc --reporter=lcov yarn test && codecov",
+        "test-report": "mocha --reporter mochawesome",
+        "lint": "eslint -c .eslintrc.js --ext .js ./{src,test}/**/*.js",
+        "clean": "rimraf -rf ./.nyc_output ./coverage ./mochawesome-report"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && yarn test"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint -c .eslintrc.js"
+        ],
+        "*.{js,json,md}": [
+            "prettier --write"
+        ]
+    },
+    "devDependencies": {
+        "benchmark": "^2.1.4",
+        "codecov": "^3.6.2",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-import": "^2.20.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.1",
+        "intelli-espower-loader": "^1.0.1",
+        "lint-staged": "^10.0.7",
+        "lodash": "^4.17.15",
+        "mocha": "^7.0.1",
+        "mochawesome": "^4.1.0",
+        "nyc": "^15.0.0",
+        "power-assert": "^1.6.1",
+        "prettier": "^1.19.1"
+    }
 }

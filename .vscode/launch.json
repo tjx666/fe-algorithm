@@ -1,14 +1,62 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "dev",
             "type": "node",
             "request": "launch",
-            "name": "javascript-algorithm",
-            "program": "${workspaceFolder}/src/sort/directInsertSort.js",
+            "skipFiles": ["<node_internals>/**"],
+            "stopOnEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "program": "${file}"
+        },
+        {
+            "name": "test",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**"],
+            "stopOnEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+                "NODE_ENV": "test",
+                "VSCODE": "1"
+            },
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": ["--timeout", "999999", "${workspaceFolder}/test"],
+            "sourceMaps": true
+        },
+        {
+            "name": "test-file",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**"],
+            "stopOnEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+                "NODE_ENV": "test",
+                "VSCODE": "1"
+            },
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": ["--timeout", "999999", "${file}"],
+            "sourceMaps": true
+        },
+        {
+            "name": "test-debug",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**"],
+            "stopOnEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+                "NODE_ENV": "test",
+                "DEBUG": "1"
+            },
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": ["--timeout", "999999", "${file}"],
+            "sourceMaps": true
         }
     ]
 }
