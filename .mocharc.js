@@ -8,11 +8,11 @@ const configs = {
     colors: true,
 };
 
-if (process.env.VSCODE === '1') {
+if (process.env.VSCODE_TEST === '1') {
     delete configs.spec;
 }
 
-if (process.env.DEBUG === '1') {
+if (process.env.VSCODE_DEBUG === '1') {
     delete configs.require;
     delete configs.spec;
 }
