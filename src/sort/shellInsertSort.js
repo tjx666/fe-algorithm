@@ -1,8 +1,8 @@
-const shellInsertSort = (array) => {
+const shellInsertSort = array => {
     const result = [...array];
-    const length = array.length;
+    const { length } = array;
 
-    let distance = length / 2 | 0;
+    let distance = (length / 2) | 0;
     while (distance >= 1) {
         for (let i = distance; i < length; i++) {
             const sortedElement = result[i];
@@ -14,10 +14,10 @@ const shellInsertSort = (array) => {
             result[j + distance] = sortedElement;
         }
 
-        distance = distance / 2 | 0;
+        distance = (distance / 2) | 0;
     }
 
     return result;
-}
+};
 
 module.exports = shellInsertSort;

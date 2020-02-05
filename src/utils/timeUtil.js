@@ -1,4 +1,4 @@
-exports.getCostTime = (fn, isLog=fasle) => {
+exports.getCostTime = (fn, isLog = false) => {
     const start = Date.now();
     fn();
     const end = Date.now();

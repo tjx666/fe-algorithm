@@ -23,6 +23,8 @@ module.exports = {
         'no-plusplus': 0,
         'no-unused-expressions': 0,
         'no-unused-vars': 0,
+        'no-restricted-syntax': 0,
+        'max-classes-per-file': 0,
     },
     overrides: [
         {

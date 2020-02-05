@@ -2,12 +2,12 @@ const assert = require('assert');
 
 /**
  * 快速排序
- * @param {*} array 
+ * @param {*} array
  */
-const quickSort = (array) => {
+const quickSort = array => {
     const resultArray = [...array];
 
-    ! function sort(array, left = 0, right = array.length - 1) {
+    !(function sort(_array, left = 0, right = _array.length - 1) {
         if (left >= right) return resultArray;
         const referenceNumber = resultArray[left];
 
@@ -23,12 +23,12 @@ const quickSort = (array) => {
 
         assert.equal(i, j);
         resultArray[i] = referenceNumber;
-        
+
         sort(resultArray, left, j - 1);
         sort(resultArray, i + 1, right);
-    }(array);
+    })(array);
 
     return resultArray;
-}
+};
 
 module.exports = quickSort;
