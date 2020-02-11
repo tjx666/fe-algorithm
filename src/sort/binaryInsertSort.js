@@ -1,11 +1,11 @@
 const binaryInsertSearch = require('./binaryInsertSearch');
-const ArrayUtil = require('../utils/arrayUtil');
+const ArrayUtil = require('../utils/array');
 
 /**
  * 二分插入排序
- * @param {*} array 
+ * @param {*} array
  */
-const binaryInsertSort = (array) => {
+const binaryInsertSort = array => {
     const sortedArray = [];
     for (let i = 0; i < array.length; i++) {
         const insertIndex = binaryInsertSearch(sortedArray, array[i]);
@@ -13,6 +13,6 @@ const binaryInsertSort = (array) => {
     }
 
     return sortedArray;
-}
+};
 
 module.exports = binaryInsertSort;

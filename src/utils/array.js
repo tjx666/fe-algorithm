@@ -1,8 +1,8 @@
 /**
  * 向数组的指定位置插入一个元素
- * @param {Array} array 
- * @param {number} position 
- * @param {number} value 
+ * @param {Array} array
+ * @param {number} position
+ * @param {number} value
  */
 const insert = (array, position, value) => {
     if (!Array.isArray(array)) throw new TypeError(`${array} 不是数组!`);
@@ -22,14 +22,14 @@ const insert = (array, position, value) => {
 
         array[position] = value;
     }
-}
+};
 
 if (require.main === module) {
     const testArray = [1, 2, 4, 5];
-    insert(testArray, -1, 3)
+    insert(testArray, -1, 3);
     console.log(testArray);
 } else {
     module.exports = {
-        insert
+        insert,
     };
 }

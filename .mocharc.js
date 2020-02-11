@@ -13,8 +13,7 @@ if (process.env.VSCODE_TEST === '1') {
 }
 
 if (process.env.VSCODE_DEBUG === '1') {
-    delete configs.require;
-    delete configs.spec;
+    configs.require.shift();
 }
 
 module.exports = configs;

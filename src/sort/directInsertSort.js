@@ -1,10 +1,10 @@
-const ArrayUtil = require('../utils/arrayUtil');
+const ArrayUtil = require('../utils/array');
 
 /**
  * 直接插入排序
- * @param {*} array 
+ * @param {*} array
  */
-const directInsertSort = (array) => {
+const directInsertSort = array => {
     const sortedArray = [];
     for (let i = 0; i < array.length; i++) {
         let j = 0;
@@ -14,11 +14,11 @@ const directInsertSort = (array) => {
                 break;
             }
         }
-       
+
         if (j === sortedArray.length) sortedArray.push(array[i]);
     }
 
     return sortedArray;
-}
+};
 
 module.exports = directInsertSort;

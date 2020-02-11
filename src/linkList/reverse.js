@@ -1,4 +1,4 @@
-const { Node, LinkList } = require('./LinkList');
+const { Node, LinkList } = require('./linkList');
 
 const testLinkList = new LinkList();
 for (let i = 1; i <= 5; i++) {
