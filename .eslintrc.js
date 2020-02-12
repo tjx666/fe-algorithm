@@ -17,14 +17,16 @@ module.exports = {
     rules: {
         'consistent-return': OFF,
         'func-names': OFF,
+        'lines-between-class-members': OFF,
+        'max-classes-per-file': OFF,
         'no-bitwise': OFF,
         'no-console': OFF,
         'no-param-reassign': OFF,
         'no-plusplus': OFF,
+        'no-restricted-syntax': OFF,
+        'no-underscore-dangle': OFF,
         'no-unused-expressions': OFF,
         'no-unused-vars': OFF,
-        'no-restricted-syntax': OFF,
-        'max-classes-per-file': OFF,
     },
     overrides: [
         {
