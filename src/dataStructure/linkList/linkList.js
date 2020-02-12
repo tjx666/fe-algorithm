@@ -1,6 +1,12 @@
 const Node = require('./node');
 
+/**
+ * @template T
+ */
 class LinkList {
+    /**
+     * @param {(a: T, b: T) => boolean} [equals]
+     */
     constructor(equals) {
         this._equals = equals || ((a, b) => a === b);
         this._size = 0;
@@ -11,6 +17,11 @@ class LinkList {
         return this._size;
     }
 
+    /**
+     * append a node
+     * @param {T} value
+     * @returns {this} this
+     */
     append(value) {
         const node = new Node(value);
 
@@ -28,6 +39,11 @@ class LinkList {
         return this;
     }
 
+    /**
+     * get the node at specified index
+     * @param {number} index
+     * @returns {(Node|undefined)} node at specified index or undefined
+     */
     getAt(index) {
         if (index >= 0 && index < this._size) {
             let current = this.head;
@@ -41,6 +57,12 @@ class LinkList {
         return undefined;
     }
 
+    /**
+     * insert a node at specified index position
+     * @param {number} index
+     * @param {T} value
+     * @returns {boolean} true when insert a node, or false
+     */
     insert(index, value) {
         if (index >= 0 && index <= this._size) {
             const node = new Node(value);
@@ -60,6 +82,11 @@ class LinkList {
         return false;
     }
 
+    /**
+     * remove the node at specified index
+     * @param {number} index
+     * @returns {(T|undefined)} value of removed node, or undefined when index is not in range
+     */
     removeAt(index) {
         if (index >= 0 && index < this._size) {
             if (index === 0) {
@@ -80,6 +107,11 @@ class LinkList {
         return undefined;
     }
 
+    /**
+     * get the index of value
+     * @param {T} value
+     * @returns {number} index of value
+     */
     indexOf(value) {
         let current = this.head;
         let index = 0;
@@ -95,20 +127,37 @@ class LinkList {
         return -1;
     }
 
+    /**
+     * remove the value equals to specified value
+     * @param {*} value
+     * @returns {(T|undefined)} value of removed node, or undefined when not included
+     */
     remove(value) {
         const index = this.indexOf(value);
         return this.removeAt(index);
     }
 
+    /**
+     * check the linkList is empty
+     * @returns {boolean} true when empty, or false
+     */
     isEmpty() {
         return this._size === 0;
     }
 
+    /**
+     * clear linkList
+     * @returns {void}
+     */
     clear() {
         this.head = undefined;
         this._size = 0;
     }
 
+    /**
+     * get linkList string join with arrow
+     * @returns {string}
+     */
     toString() {
         let str = '';
         let current = this.head;

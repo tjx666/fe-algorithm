@@ -1,11 +1,16 @@
-module.exports = class Node {
+/**
+ * @template T=number
+ */
+class Node {
     /**
      *
-     * @param {any} value node value
-     * @param {Node} next next node
+     * @param {T} value value of node
+     * @param {Node<T>} next point to next node
      */
     constructor(value, next) {
         this.value = value;
         this.next = next;
     }
-};
+}
+
+module.exports = Node;

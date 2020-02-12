@@ -1,5 +1,5 @@
 const assert = require('assert');
-const LinkList = require('../../src/dataStructure/linkList/linkList');
+const LinkList = require('../../../src/dataStructure/linkList/linkList');
 
 it('#linkList', () => {
     describe('#init status', () => {
