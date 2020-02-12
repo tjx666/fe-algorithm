@@ -10,9 +10,19 @@ class LinkList {
     constructor(equals) {
         this._equals = equals || ((a, b) => a === b);
         this._size = 0;
+        /**
+         * @type Node
+         */
         this.head = undefined;
     }
 
+    /**
+     *
+     *
+     * @readonly
+     * @memberof LinkList
+     * @returns number
+     */
     get size() {
         return this._size;
     }
@@ -42,7 +52,7 @@ class LinkList {
     /**
      * get the node at specified index
      * @param {number} index
-     * @returns {(Node|undefined)} node at specified index or undefined
+     * @returns {Node} node at specified index or undefined
      */
     getAt(index) {
         if (index >= 0 && index < this._size) {
@@ -85,7 +95,7 @@ class LinkList {
     /**
      * remove the node at specified index
      * @param {number} index
-     * @returns {(T|undefined)} value of removed node, or undefined when index is not in range
+     * @returns {T} value of removed node, or undefined when index is not in range
      */
     removeAt(index) {
         if (index >= 0 && index < this._size) {
@@ -130,7 +140,7 @@ class LinkList {
     /**
      * remove the value equals to specified value
      * @param {*} value
-     * @returns {(T|undefined)} value of removed node, or undefined when not included
+     * @returns {T} value of removed node, or undefined when not included
      */
     remove(value) {
         const index = this.indexOf(value);

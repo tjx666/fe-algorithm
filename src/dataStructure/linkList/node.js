@@ -1,5 +1,5 @@
 /**
- * @template T=number
+ * @template T
  */
 class Node {
     /**
