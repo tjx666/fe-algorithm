@@ -81,10 +81,15 @@ it('#linkList', () => {
         it('should remove the node at given index when not empty', () => {
             list.append(6);
             list.append(8);
-            assert.strictEqual(list.removeAt(0).value, 6);
+            assert.strictEqual(list.removeAt(0), 6);
             assert.strictEqual(list.head.value, 8);
-            assert.strictEqual(list.removeAt(0).value, 8);
+            assert.strictEqual(list.removeAt(0), 8);
             assert.strictEqual(list.removeAt(0), undefined);
+
+            list.append(1)
+                .append(2)
+                .append(3);
+            assert.strictEqual(list.removeAt(2), 3);
         });
     });
 
@@ -114,9 +119,9 @@ it('#linkList', () => {
         it('should remove the first node which value equals to given value when not empty', () => {
             list.append(6);
             list.append(8);
-            assert.strictEqual(list.remove(6).value, 6);
+            assert.strictEqual(list.remove(6), 6);
             assert.strictEqual(list.head.value, 8);
-            assert.strictEqual(list.remove(8).value, 8);
+            assert.strictEqual(list.remove(8), 8);
             assert.strictEqual(list.head, undefined);
         });
     });

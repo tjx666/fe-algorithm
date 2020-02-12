@@ -66,7 +66,7 @@ class LinkList {
                 if (this.head != null) {
                     const { head } = this;
                     this.head = this.head.next;
-                    return head;
+                    return head.value;
                 }
                 return undefined;
             }
@@ -74,7 +74,6 @@ class LinkList {
             const previous = this.getAt(index - 1);
             const current = this.getAt(index);
             previous.next = current.next;
-
             this._size--;
             return current.value;
         }
