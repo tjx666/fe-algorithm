@@ -1,5 +1,7 @@
 const Node = require('./node');
 
+/** @typedef {import('./node')} Node */
+
 /**
  * @template T
  */
@@ -10,15 +12,11 @@ class LinkList {
     constructor(equals) {
         this._equals = equals || ((a, b) => a === b);
         this._size = 0;
-        /**
-         * @type Node
-         */
+        /** @type Node */
         this.head = undefined;
     }
 
     /**
-     *
-     *
      * @readonly
      * @memberof LinkList
      * @returns number
@@ -28,7 +26,6 @@ class LinkList {
     }
 
     /**
-     * append a node
      * @param {T} value
      * @returns {this} this
      */
@@ -50,9 +47,8 @@ class LinkList {
     }
 
     /**
-     * get the node at specified index
      * @param {number} index
-     * @returns {Node} node at specified index or undefined
+     * @returns {Node} node or undefined
      */
     getAt(index) {
         if (index >= 0 && index < this._size) {
@@ -68,10 +64,9 @@ class LinkList {
     }
 
     /**
-     * insert a node at specified index position
      * @param {number} index
      * @param {T} value
-     * @returns {boolean} true when insert a node, or false
+     * @returns {boolean}
      */
     insert(index, value) {
         if (index >= 0 && index <= this._size) {
@@ -93,9 +88,8 @@ class LinkList {
     }
 
     /**
-     * remove the node at specified index
      * @param {number} index
-     * @returns {T} value of removed node, or undefined when index is not in range
+     * @returns {T} node value or undefined
      */
     removeAt(index) {
         if (index >= 0 && index < this._size) {
@@ -118,9 +112,8 @@ class LinkList {
     }
 
     /**
-     * get the index of value
      * @param {T} value
-     * @returns {number} index of value
+     * @returns {number} index of value, or -1 when not found
      */
     indexOf(value) {
         let current = this.head;
@@ -138,7 +131,6 @@ class LinkList {
     }
 
     /**
-     * remove the value equals to specified value
      * @param {*} value
      * @returns {T} value of removed node, or undefined when not included
      */
@@ -148,15 +140,13 @@ class LinkList {
     }
 
     /**
-     * check the linkList is empty
-     * @returns {boolean} true when empty, or false
+     * @returns {boolean}
      */
     isEmpty() {
         return this._size === 0;
     }
 
     /**
-     * clear linkList
      * @returns {void}
      */
     clear() {

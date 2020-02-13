@@ -3,9 +3,8 @@
  */
 class Node {
     /**
-     *
-     * @param {T} value value of node
-     * @param {Node<T>} next point to next node
+     * @param {T} value
+     * @param {Node<T>} next
      */
     constructor(value, next) {
         this.value = value;

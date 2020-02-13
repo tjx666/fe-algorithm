@@ -3,18 +3,22 @@ const LinkList = require('../../../src/dataStructure/linkList/linkList');
 const reverse1 = require('../../../src/dataStructure/linkList/reverse/reverse1');
 
 describe('#reverse', () => {
-    it('should reverse linkList', () => {
-        const list = new LinkList();
-        reverse1(list);
-        assert.strictEqual(list.head, undefined);
+    [reverse1].forEach((reverse, index) => {
+        describe(`#reverse${index + 1}`, () => {
+            it('should reverse linkList', () => {
+                const list = new LinkList();
+                reverse(list);
+                assert.strictEqual(list.head, undefined);
 
-        list.append('a')
-            .append('b')
-            .append('c')
-            .append('d');
-        reverse1(list);
-        reverse1(list);
-        assert.strictEqual(list.head.value, 'a');
-        assert.strictEqual(list.size, 4);
+                list.append('a')
+                    .append('b')
+                    .append('c')
+                    .append('d');
+                reverse(list);
+                assert.strictEqual(list.toString(), 'd -> c -> b -> a');
+                reverse(list);
+                assert.strictEqual(list.toString(), 'a -> b -> c -> d');
+            });
+        });
     });
 });
