@@ -1,7 +1,9 @@
+/** @typedef {import('../linkList')} LinkList */
+
 /**
- *
- * @param {Node} linkList
- * @returns {void} head node of reversed linkList
+ * @typedef {import('../linkList')} LinkList
+ * @param {LinkList} linkList
+ * @returns {void}
  */
 function reverse(linkList) {
     if (linkList.head == null) return;
@@ -14,7 +16,6 @@ function reverse(linkList) {
         previous = current;
         current = next;
     }
-
     linkList.head.next = undefined;
     linkList.head = previous;
 }

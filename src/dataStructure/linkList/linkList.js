@@ -12,7 +12,7 @@ class LinkList {
     constructor(equals) {
         this._equals = equals || ((a, b) => a === b);
         this._size = 0;
-        /** @type Node */
+        /** @type {Node} */
         this.head = undefined;
     }
 
