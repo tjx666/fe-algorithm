@@ -8,16 +8,18 @@
             "skipFiles": ["<node_internals>/**"],
             "stopOnEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "args": ["${file}"],
             "env": {
                 "NODE_ENV": "development"
             },
-            "program": "${file}"
+            "sourceMaps": true
         },
         {
             "name": "test-debug",
             "type": "node",
             "request": "launch",
-            "skipFiles": ["<node_internals>/**"],
+            "skipFiles": ["<node_internals>/**", "mocha/lib/**"],
             "stopOnEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "env": {

@@ -9,6 +9,10 @@ const LinkList = require('../linkList');
 function reverse(linkList) {
     if (linkList.head == null) return linkList;
 
+    if (false) {
+        console.log('aaaa')
+    }
+
     const { head } = linkList;
     let current = head;
     while (current != null) {
@@ -19,5 +23,7 @@ function reverse(linkList) {
     }
     head.next = undefined;
 }
+
+
 
 module.exports = reverse;

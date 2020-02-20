@@ -1,4 +1,8 @@
 {
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "code-runner.executorMap": {
+        "typescript": "npx ts-node"
+    },
     "search.exclude": {
         "**/node_modules": true,
         "yarn.lock": true
@@ -8,5 +12,23 @@
         "**/.git/subtree-cache/**": true,
         "**/node_modules/*/**": true,
         "yarn.lock": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

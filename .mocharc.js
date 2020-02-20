@@ -1,8 +1,8 @@
 const configs = {
-    require: ['intelli-espower-loader'],
+    require: ['espower-typescript/guess'],
     recursive: true,
-    extension: ['js'],
-    spec: ['./test/**/*.test.js'],
+    extension: ['ts'],
+    spec: ['./test/**/*.test.ts'],
     exit: true,
     timeout: 3 * 1000,
     colors: true,
@@ -10,10 +10,6 @@ const configs = {
 
 if (process.env.VSCODE_TEST === '1') {
     delete configs.spec;
-}
-
-if (process.env.VSCODE_DEBUG === '1') {
-    delete configs.require;
 }
 
 module.exports = configs;

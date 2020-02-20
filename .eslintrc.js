@@ -1,20 +1,47 @@
 const OFF = 0;
+const ERROR = 2;
 
 module.exports = {
     env: {
-        commonjs: true,
         es6: true,
         node: true,
         mocha: true,
     },
-    extends: ['airbnb-base', 'prettier'],
+    extends: [
+        'airbnb-base',
+        'plugin:@typescript-eslint/recommended',
+        'prettier',
+        'prettier/@typescript-eslint',
+    ],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
-        BigInt: 'readonly',
     },
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+    },
+    plugins: ['@typescript-eslint'],
+    settings: {
+        'import/resolver': {
+            node: {
+                extensions: ['.ts', '.js', '.json'],
+            },
+        },
+    },
     rules: {
+        'import/extensions': [
+            ERROR,
+            'ignorePackages',
+            {
+                ts: 'never',
+                tsx: 'never',
+                json: 'never',
+                js: 'never',
+            },
+        ],
+
         'consistent-return': OFF,
         'func-names': OFF,
         'lines-between-class-members': OFF,
@@ -30,9 +57,9 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['{test,benchmark}/**/*.js'],
+            files: ['{test,benchmark}/**/*.ts'],
             rules: {
-                'import/no-extraneous-dependencies': OFF,
+                'import/first': OFF,
             },
         },
     ],
