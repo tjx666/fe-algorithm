@@ -19,7 +19,7 @@
             "name": "test-debug",
             "type": "node",
             "request": "launch",
-            "skipFiles": ["<node_internals>/**", "mocha/lib/**"],
+            "skipFiles": ["<node_internals>/**", "mocha/lib/**", "empower-core/**"],
             "stopOnEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "env": {

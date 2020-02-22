@@ -30,6 +30,7 @@ export default class LinkList<T = number> {
         }
 
         this._size++;
+
         return this;
     }
 
@@ -80,8 +81,10 @@ export default class LinkList<T = number> {
             const current = this.getAt(index)!;
             previous.next = current.next;
             this._size--;
+
             return current.value;
         }
+
         return undefined;
     }
 

@@ -3,9 +3,6 @@
         /* Basic Options */
         "target": "ES2020",
         "module": "commonjs",
-        "outDir": "out",
-        "sourceMap": true,
-        "noEmitOnError": true,
 
         /* Strict Type-Checking Options */
         "strict": true,
