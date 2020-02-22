@@ -42,6 +42,9 @@ module.exports = {
             },
         ],
 
+        '@typescript-eslint/no-useless-constructor': ERROR,
+        '@typescript-eslint/no-non-null-assertion': OFF,
+
         'consistent-return': OFF,
         'func-names': OFF,
         'lines-between-class-members': OFF,
@@ -54,6 +57,7 @@ module.exports = {
         'no-underscore-dangle': OFF,
         'no-unused-expressions': OFF,
         'no-unused-vars': OFF,
+        'no-useless-constructor': OFF,
     },
     overrides: [
         {
