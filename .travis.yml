@@ -6,4 +6,4 @@ install:
     - yarn
 script:
     - yarn audit
-    - yarn run coverage
+    - yarn run coverage-upload
