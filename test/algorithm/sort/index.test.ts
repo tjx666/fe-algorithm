@@ -1,8 +1,9 @@
 import assert = require('assert');
 import selectSort from '../../../src/algorithm/sort/selectSort';
 import insertSort from '../../../src/algorithm/sort/insertSort';
+import bubbleSort from '../../../src/algorithm/sort/bubbleSort';
 
-[selectSort, insertSort].forEach(sort => {
+[selectSort, insertSort, bubbleSort].forEach(sort => {
     describe(`#${sort.name}`, () => {
         it('should do nothing when array is empty or only one element', () => {
             let array: number[] = [];

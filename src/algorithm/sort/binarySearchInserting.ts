@@ -1,11 +1,11 @@
-export default /**
+/**
  * 二分查找插入位置
- * @param array 待搜索的已排序的数组
- * @param length 查询的范围
- * @param value 要插入的值
- * @returns 插入的位置
  */
-function binarySearchInserting(array: number[], length: number, value: number): number {
+export default function binarySearchInserting(
+    array: number[],
+    length: number,
+    value: number,
+): number {
     if (length === 0) {
         return 0;
     }

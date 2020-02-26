@@ -1,6 +1,8 @@
 /**
- * 选择排序
- * @param array 待排序的数组
+ * 直接选择排序
+ * 时间复杂度 O(n²)，空间复杂度 O(1)
+ * 最好最坏都是 O(n²)，因为不管怎样都要循环到最后
+ * 是不稳定的，例如：8, 4, 3, 2, 8, 1，第一次交换就把前面的 8 交换到后面的 8 后面了
  */
 export default function selectSort(array: number[]): void {
     const { length } = array;
