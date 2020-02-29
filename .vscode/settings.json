@@ -5,13 +5,8 @@
     },
     "search.exclude": {
         "**/node_modules": true,
-        "yarn.lock": true
-    },
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/*/**": true,
-        "yarn.lock": true
+        "yarn.lock": true,
+        "LICENSE": true
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
