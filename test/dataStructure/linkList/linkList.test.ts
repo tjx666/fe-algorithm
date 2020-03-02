@@ -1,5 +1,5 @@
 import assert = require('assert');
-import LinkList from '../../../src/dataStructure/linkList/linkList';
+import LinkList from 'dataStructure/linkList/linkList';
 
 it('#linkList', () => {
     describe('#init status', () => {

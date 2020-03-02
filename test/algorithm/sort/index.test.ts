@@ -1,8 +1,8 @@
 import assert = require('assert');
-import selectSort from '../../../src/algorithm/sort/selectSort';
-import insertSort from '../../../src/algorithm/sort/insertSort';
-import bubbleSort from '../../../src/algorithm/sort/bubbleSort';
-import quickSort from '../../../src/algorithm/sort/quickSort';
+import selectSort from 'algorithm/sort/selectSort';
+import insertSort from 'algorithm/sort/insertSort';
+import bubbleSort from 'algorithm/sort/bubbleSort';
+import quickSort from 'algorithm/sort/quickSort';
 
 [selectSort, insertSort, bubbleSort, quickSort].forEach(sort => {
     describe(`#${sort.name}`, () => {

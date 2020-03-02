@@ -17,6 +17,11 @@
         "moduleResolution": "node",
         "esModuleInterop": true,
         "resolveJsonModule": true,
+        "baseUrl": "./",
+        "paths": {
+            "algorithm/*": ["src/algorithm/*"],
+            "dataStructure/*": ["src/dataStructure/*"]
+        },
 
         /* Experimental Options */
         "experimentalDecorators": true,

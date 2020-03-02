@@ -1,6 +1,6 @@
 import assert = require('assert');
-import LinkList from '../../../src/dataStructure/linkList/linkList';
-import reverse from '../../../src/algorithm/linkList/reverse';
+import LinkList from 'dataStructure/linkList/linkList';
+import reverse from 'algorithm/linkList/reverse';
 
 describe('#reverse', () => {
     it('should reverse linkList', () => {

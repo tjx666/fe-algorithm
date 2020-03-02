@@ -1,4 +1,4 @@
-import LinkList from '../../dataStructure/linkList/linkList';
+import LinkList from 'dataStructure/linkList/linkList';
 
 export default function reverse<T>(list: LinkList<T>): void {
     if (list.head == null) {

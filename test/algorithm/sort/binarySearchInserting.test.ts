@@ -1,5 +1,5 @@
 import assert = require('assert');
-import binarySearchInserting from '../../../src/algorithm/sort/binarySearchInserting';
+import binarySearchInserting from 'algorithm/sort/binarySearchInserting';
 
 describe('#binarySearchInserting', () => {
     it('should return 0 when array is empty', () => {

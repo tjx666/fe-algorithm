@@ -1,5 +1,5 @@
-import Node from '../../dataStructure/linkList/node';
-import LinkList from '../../dataStructure/linkList/linkList';
+import Node from 'dataStructure/linkList/node';
+import LinkList from 'dataStructure/linkList/linkList';
 
 /**
  * 链表加一，从左到右由高位到低位

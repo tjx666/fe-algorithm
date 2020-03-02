@@ -26,7 +26,10 @@ module.exports = {
     settings: {
         'import/resolver': {
             node: {
-                extensions: ['.ts', '.js', '.json'],
+                extensions: ['.ts'],
+            },
+            typescript: {
+                directory: [require.resolve('./tsconfig.json')],
             },
         },
     },

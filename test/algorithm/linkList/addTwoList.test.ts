@@ -1,6 +1,6 @@
 import assert = require('assert');
-import addTwoList from '../../../src/algorithm/linkList/addTwoList';
-import LinkList from '../../../src/dataStructure/linkList/linkList';
+import addTwoList from 'algorithm/linkList/addTwoList';
+import LinkList from 'src/dataStructure/linkList/linkList';
 
 describe('#addTwoList', () => {
     it('should return the list which is addTwoList', () => {

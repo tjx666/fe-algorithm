@@ -1,7 +1,7 @@
 import assert = require('assert');
 
-import LinkList from '../../../src/dataStructure/linkList/linkList';
-import plusOne from '../../../src/algorithm/linkList/plusOne';
+import LinkList from 'dataStructure/linkList/linkList';
+import plusOne from 'algorithm/linkList/plusOne';
 
 describe('#plusOne', () => {
     it('should plus one when no elements or only one elements', () => {

@@ -1,4 +1,4 @@
-import LinkList from '../../dataStructure/linkList/linkList';
+import LinkList from 'dataStructure/linkList/linkList';
 
 /**
  * 9 -> 1 -> 2

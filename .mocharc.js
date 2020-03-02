@@ -1,5 +1,5 @@
 const configs = {
-    require: ['espower-typescript/guess'],
+    require: ['tsconfig-paths/register', 'espower-typescript/guess'],
     recursive: true,
     extension: ['ts'],
     spec: ['./test/**/*.test.ts'],
