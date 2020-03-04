@@ -5,7 +5,7 @@ import { testTree } from 'dataStructure/tree/binaryTree';
 
 [preOrderTravel1, preOrderTravel2].forEach((preOrderTravel, index) => {
     describe(`#preOrderTravel ${index === 0 ? 'recursive' : 'notRecursive'}`, () => {
-        it('should return the nodes travel by preOrder', () => {
+        it('should return the nodes traveled by previous order', () => {
             const nodes = preOrderTravel(testTree);
             assert.deepStrictEqual(nodes, [1, 2, 4, 5, 3, 6, 7]);
         });
