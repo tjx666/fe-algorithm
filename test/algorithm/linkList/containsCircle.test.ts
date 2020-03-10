@@ -8,6 +8,7 @@ import containsCircle2 from 'algorithm/linkList/containsCircle/containsCircle2';
     describe(`#containsCircle${index + 1}`, () => {
         it('should return whether the linkList contains circle', () => {
             const list = new LinkList();
+            assert.strictEqual(containsCircle(list), false);
             list.append(1)
                 .append(3)
                 .append(6)

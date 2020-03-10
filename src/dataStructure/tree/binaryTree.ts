@@ -6,7 +6,7 @@ export default class BinaryTree<T = number> {
     constructor(value?: T | Node<T>) {
         if (value instanceof Node) {
             this.root = value;
-        } else {
+        } else if (value !== undefined) {
             this.root = new Node<T>(value);
         }
     }

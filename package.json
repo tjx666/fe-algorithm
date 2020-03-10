@@ -33,6 +33,7 @@
         "@types/node": "^13.9.0",
         "@typescript-eslint/eslint-plugin": "^2.23.0",
         "@typescript-eslint/parser": "^2.23.0",
+        "audit-ci": "^2.5.1",
         "benchmark": "^2.1.4",
         "codecov": "^3.6.5",
         "eslint": "^6.8.0",

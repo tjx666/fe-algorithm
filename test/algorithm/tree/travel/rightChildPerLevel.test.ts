@@ -5,6 +5,9 @@ import Node from 'dataStructure/tree/node';
 
 describe('#rightChildPerLevel', () => {
     it('should return the right child per level', () => {
+        const tree = new BinaryTree();
+        assert.deepStrictEqual(rightChildPerLevel(tree), []);
+
         const nodes = rightChildPerLevel(testTree);
         assert.deepStrictEqual(nodes, [1, 3, 7]);
 

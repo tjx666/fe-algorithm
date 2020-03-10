@@ -7,7 +7,7 @@ import Node from 'dataStructure/linkList/node';
  */
 export default function containsCircle(list: LinkList): boolean {
     if (list.head == null || list.head.next == null) {
-        return true;
+        return false;
     }
 
     let slow: Node | undefined = list.head;

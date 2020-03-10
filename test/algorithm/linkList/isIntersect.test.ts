@@ -8,6 +8,8 @@ describe('#isIntersect', () => {
     it('should adjust the two linkLists is intersecting', () => {
         const list1 = new LinkList();
         const list2 = new LinkList();
+        assert.strictEqual(isIntersect(list1, list2), false);
+
         const node = new Node(7);
 
         list1.append(1).append(3);
