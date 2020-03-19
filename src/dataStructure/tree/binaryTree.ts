@@ -19,12 +19,13 @@ export default class BinaryTree<T = number> {
     4     5     6      7
  */
 
-const testTree = new BinaryTree(1);
-testTree.root!.left = new Node(2);
-testTree.root!.right = new Node(3);
-testTree.root!.left.left = new Node(4);
-testTree.root!.left.right = new Node(5);
-testTree.root!.right.left = new Node(6);
-testTree.root!.right.right = new Node(7);
+const testTree = new BinaryTree();
+testTree.root = new Node(1);
+testTree.root.left = new Node(2);
+testTree.root.right = new Node(3);
+testTree.root.left.left = new Node(4);
+testTree.root.left.right = new Node(5);
+testTree.root.right.left = new Node(6);
+testTree.root.right.right = new Node(7);
 
 export { testTree };
