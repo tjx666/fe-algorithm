@@ -2,7 +2,7 @@ import BinaryTree from 'dataStructure/tree/binaryTree';
 import Node from 'dataStructure/tree/node';
 
 /**
- * 获取二叉树的深度-递归解法
+ * 获取二叉树的深度-非递归解法
  */
 export default function getDepthNotRecursive(tree: BinaryTree): number {
     if (tree.root == null) {
